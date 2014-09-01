@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Simple Rock Paper Scissors game written in JavaScript.">
+		<meta name="author" content="Dominik Brack">
+		<title>Rock Paper Scissors</title>
+		<link href="css/game.css" rel="stylesheet">
+	</head>
+	<body>
+		<section id="game">
+			<h1>Gameplay</h1>
+			<div>
+				<button>Player vs. Computer</button>
+				<button>Computer vs. Computer</button>
+			</div>
+			<div id="playerChoices">
+				<span>
+					<a id="rock" href="#">Rock</a>
+				</span>
+				<span>
+					<a id="rock" href="#">Paper</a>
+				</span>
+				<span>
+					<a id="rock" href="#">Scissors</a>
+				</span>
+			</div>
+			<button onclick="play('Rock');">Play!</button>
+			<button onclick="play();">Play computer!</button>
+		</section>
+
+		<script src="js/rockPaperScissors.js"></script>
+	</body>
+</html>
