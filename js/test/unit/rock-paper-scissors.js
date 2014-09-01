@@ -1,4 +1,4 @@
-/* global describe, it, inject, expect, module */
+/* global describe, it, expect */
 describe('Unit: rock paper scissors', function() {
 
 	var RockPaperScissors = function (choice) {};
@@ -10,7 +10,7 @@ describe('Unit: rock paper scissors', function() {
 		        game.mine = 'rock';
 		        game.theirs = 'scissors';
 		        var winner = game.play();
-		        expect(winner).toContain('Win')
+		        expect(winner).toContain('Win');
 		    });
 		});
 
@@ -20,7 +20,7 @@ describe('Unit: rock paper scissors', function() {
 		        game.mine = 'paper';
 		        game.theirs = 'rock';
 		        var winner = game.play();
-		        expect(winner).toContain('Win')
+		        expect(winner).toContain('Win');
 		    });
 		});
 
@@ -30,7 +30,7 @@ describe('Unit: rock paper scissors', function() {
 		        game.mine = 'scissors';
 		        game.theirs = 'paper';
 		        var winner = game.play();
-		        expect(winner).toContain('Win')
+		        expect(winner).toContain('Win');
 		    });
 		});
 	});
@@ -41,7 +41,7 @@ describe('Unit: rock paper scissors', function() {
 	        expect(game).toBeDefined();
 	    });
 
-	    it('should use 'rock' as user choice', function () {
+	    it('should use "rock" as user choice', function () {
 	        var game = new RockPaperScissors('rock');
 	        expect(game.mine).toEqual('rock');
 	    });
@@ -56,12 +56,6 @@ describe('Unit: rock paper scissors', function() {
 	    it('should initialize correctly', function () {
 	        var game = new RockPaperScissors();
 	        expect(game).toBeDefined();
-	    });
-
-	    it('should generate two random choices', function () {
-	        var game = new RockPaperScissors();
-	        expect(game.mine).toBeDefined();
-	        expect(game.theirs).toBeDefined();
 	    });
 
 	    it('should generate two random choices', function () {
