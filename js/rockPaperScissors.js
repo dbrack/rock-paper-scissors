@@ -34,7 +34,7 @@ function RockPaperScissors(choice) {
 
 	this.computeWinner = function(myChoice, theirChoice) {
 		if(myChoice === theirChoice) {
-			return 'tie';
+			return 'Tie';
 		}
 
 		var mine = this.constraints[myChoice];
