@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         browsers: ['PhantomJS'],
         logLevel: 'INFO',
         options: {
-          files: ['js/test/unit/*.js']
+          files: ['js/*.js', 'js/test/unit/*.js']
         }
       }
     },

@@ -11,9 +11,7 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    files: [
-      'js/test/unit/*.js'
-    ],
+    files: [],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -25,8 +23,12 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
+    junitReporter: {
+      // will be resolved to basePath (in the same way as files/exclude patterns)
+      outputFile: 'js/test/test-results.xml'
+    },
 
     // web server port
     port: 9876,
@@ -47,7 +49,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['chrome'],
+    browsers: [],
 
 
     // Continuous Integration mode

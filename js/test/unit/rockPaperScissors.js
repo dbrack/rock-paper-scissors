@@ -1,10 +1,10 @@
 /* global describe, it, expect */
-describe('Unit: rock paper scissors', function() {
+describe('Unit: Rock paper scissors', function() {
 
-	var RockPaperScissors = function (choice) {};
+	//var RockPaperScissors = function (choice) {};
 
-	describe('Gameplay', function() {
-		describe('Rock', function() {
+	describe('gameplay,', function() {
+		describe('rock', function() {
 		    it('should crush scissors', function () {
 		        var game = new RockPaperScissors();
 		        game.mine = 'rock';
@@ -14,7 +14,7 @@ describe('Unit: rock paper scissors', function() {
 		    });
 		});
 
-		describe('Paper', function() {
+		describe('paper', function() {
 		    it('should cover rock', function () {
 		        var game = new RockPaperScissors();
 		        game.mine = 'paper';
@@ -24,7 +24,7 @@ describe('Unit: rock paper scissors', function() {
 		    });
 		});
 
-		describe('Scissors', function() {
+		describe('scissors', function() {
 		    it('should cut paper', function () {
 		        var game = new RockPaperScissors();
 		        game.mine = 'scissors';
@@ -35,7 +35,7 @@ describe('Unit: rock paper scissors', function() {
 		});
 	});
 
-	describe('Player vs Computer', function() {
+	describe('player vs computer', function() {
 	    it('should initialize correctly', function () {
 	        var game = new RockPaperScissors('rock');
 	        expect(game).toBeDefined();
@@ -52,7 +52,7 @@ describe('Unit: rock paper scissors', function() {
 	    });
 	});
 
-	describe('Computer vs Computer', function() {
+	describe('computer vs computer', function() {
 	    it('should initialize correctly', function () {
 	        var game = new RockPaperScissors();
 	        expect(game).toBeDefined();
