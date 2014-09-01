@@ -8,6 +8,7 @@ module.exports = function(grunt) {
         singleRun: true,
         browsers: ['PhantomJS'],
         logLevel: 'INFO',
+        reporters: ['progress', 'coverage'],
         options: {
           files: ['js/*.js', 'js/test/unit/*.js']
         }
