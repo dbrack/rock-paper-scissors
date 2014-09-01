@@ -4,6 +4,15 @@ describe('Unit: Rock paper scissors', function() {
 	//var RockPaperScissors = function (choice) {};
 
 	describe('gameplay,', function() {
+
+	    it('two equal choices should result in a tie', function () {
+	        var game = new RockPaperScissors();
+	        game.mine = 'rock';
+	        game.theirs = 'rock';
+	        var winner = game.play();
+	        expect(winner).toContain('Tie');
+	    });
+
 		describe('rock', function() {
 		    it('should crush scissors', function () {
 		        var game = new RockPaperScissors();
@@ -11,6 +20,14 @@ describe('Unit: Rock paper scissors', function() {
 		        game.theirs = 'scissors';
 		        var winner = game.play();
 		        expect(winner).toContain('Win');
+		    });
+
+		    it('should lose against paper', function () {
+		        var game = new RockPaperScissors();
+		        game.mine = 'rock';
+		        game.theirs = 'paper';
+		        var winner = game.play();
+		        expect(winner).toContain('Lost');
 		    });
 		});
 
@@ -22,6 +39,14 @@ describe('Unit: Rock paper scissors', function() {
 		        var winner = game.play();
 		        expect(winner).toContain('Win');
 		    });
+
+		    it('should lose against scissors', function () {
+		        var game = new RockPaperScissors();
+		        game.mine = 'paper';
+		        game.theirs = 'scissors';
+		        var winner = game.play();
+		        expect(winner).toContain('Lost');
+		    });
 		});
 
 		describe('scissors', function() {
@@ -31,6 +56,14 @@ describe('Unit: Rock paper scissors', function() {
 		        game.theirs = 'paper';
 		        var winner = game.play();
 		        expect(winner).toContain('Win');
+		    });
+
+		    it('should lose against rock', function () {
+		        var game = new RockPaperScissors();
+		        game.mine = 'scissors';
+		        game.theirs = 'rock';
+		        var winner = game.play();
+		        expect(winner).toContain('Lost');
 		    });
 		});
 	});
