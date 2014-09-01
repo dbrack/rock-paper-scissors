@@ -1,8 +1,5 @@
 /* global describe, it, expect */
 describe('Unit: Rock paper scissors', function() {
-
-	//var RockPaperScissors = function (choice) {};
-
 	describe('gameplay,', function() {
 
 	    it('two equal choices should result in a tie', function () {
