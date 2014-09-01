@@ -1,6 +1,5 @@
-'use strict';
-
 function RockPaperScissors(choice) {
+	'use strict';
 
 	this.choices = ['rock', 'scissors', 'paper'];
 	this.constraints = {
@@ -39,12 +38,12 @@ function RockPaperScissors(choice) {
 		}
 
 		var mine = this.constraints[myChoice];
-		var theirs = this.constraints[theirChoice]
+		var theirs = this.constraints[theirChoice];
 
 		var win = mine.beats[theirChoice] !== undefined;
 
 		if(win) {
-			return('Win! ' + mine.name + ' ' + mine.beats[theirs.name.toLowerCase()] + ' ' + theirs.name)
+			return('Win! ' + mine.name + ' ' + mine.beats[theirs.name.toLowerCase()] + ' ' + theirs.name);
 		} else {
 			return('Lost! ' + theirs.name + ' ' + theirs.beats[mine.name.toLowerCase()] + ' ' + mine.name);
 		}
