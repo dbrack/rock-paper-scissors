@@ -64,5 +64,9 @@ function RockPaperScissors(choice) {
 function play(choice) {
 	var game = new RockPaperScissors(choice);
 	var winner = game.play();
-	alert(winner);
+
+	var div = document.createElement('div');
+	div.setAttribute("id", "result");
+	div.innerHTML = '<span>' + winner + '</span>';
+	document.getElementById('game').appendChild(div);
 }
