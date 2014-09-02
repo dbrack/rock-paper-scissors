@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         logLevel: 'INFO',
         reporters: ['progress', 'coverage'],
         options: {
-          files: ['js/*.js', 'js/test/unit/*.js']
+          files: ['js/rockPaperScissors.js', 'js/test/unit/*.js']
         }
       }
     },
