@@ -33,16 +33,14 @@ function RockPaperScissors(choice) {
 	};
 
 	this.computeWinner = function(myChoice, theirChoice) {
-		if(myChoice === theirChoice) {
-			return 'Tie';
-		}
+		if (myChoice === theirChoice) { return 'Tie'; }
 
 		var mine = this.constraints[myChoice];
 		var theirs = this.constraints[theirChoice];
 
 		var win = mine.beats[theirChoice] !== undefined;
 
-		if(win) {
+		if (win) {
 			return('Win! ' + mine.name + ' ' + mine.beats[theirs.name.toLowerCase()] + ' ' + theirs.name);
 		} else {
 			return('Lost! ' + theirs.name + ' ' + theirs.beats[mine.name.toLowerCase()] + ' ' + mine.name);
@@ -50,7 +48,7 @@ function RockPaperScissors(choice) {
 	};
 
 	// no choice supplied, play computer vs computer
-	if(choice === undefined) {
+	if (choice === undefined) {
 		choice = this.generateRandomChoice();
 	} else {
 		// make sure we can find the key in our hash table
@@ -59,14 +57,4 @@ function RockPaperScissors(choice) {
 
 	this.mine = choice;
 	this.theirs = this.generateRandomChoice();
-}
-
-function play(choice) {
-	var game = new RockPaperScissors(choice);
-	var winner = game.play();
-
-	var div = document.createElement('div');
-	div.setAttribute("id", "result");
-	div.innerHTML = '<span>' + winner + '</span>';
-	document.getElementById('game').appendChild(div);
 }
