@@ -21,7 +21,7 @@ to run unit tests and generate test coverage report.
 
 ## Extending the game
 
-The natural extension of this game would probably be [Rock-paper-scissors-lizard-Spock](http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock). This can be achieved by simply extending the constraint hash table in the RockPaperScissors class.
+The natural extension of this game would probably be [Rock-paper-scissors-lizard-Spock](http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock). This can be achieved by simply extending the constraint object in the RockPaperScissors class.
 
 Here's a quick example for ```lizard```
 
