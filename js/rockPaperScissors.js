@@ -1,7 +1,6 @@
 function RockPaperScissors(choice) {
 	'use strict';
 
-	this.choices = ['rock', 'scissors', 'paper'];
 	this.constraints = {
 		rock: {
 			name: 'Rock',
@@ -27,9 +26,10 @@ function RockPaperScissors(choice) {
 		return this.computeWinner(this.mine, this.theirs);
 	};
 
-	this.getRandomChoice = function() {
-		var randomChoice = Math.floor(Math.random() * this.choices.length);
-		return this.choices[randomChoice];
+	this.generateRandomChoice = function() {
+	    var choices = Object.keys(this.constraints);
+	    var randomChoice = Math.floor(Math.random() * choices.length);
+	    return choices[randomChoice];
 	};
 
 	this.computeWinner = function(myChoice, theirChoice) {
@@ -51,14 +51,14 @@ function RockPaperScissors(choice) {
 
 	// no choice supplied, play computer vs computer
 	if(choice === undefined) {
-		choice = this.getRandomChoice();
+		choice = this.generateRandomChoice();
 	} else {
 		// make sure we can find the key in our hash table
 		choice = choice.toLowerCase();
 	}
 
 	this.mine = choice;
-	this.theirs = this.getRandomChoice();
+	this.theirs = this.generateRandomChoice();
 }
 
 function play(choice) {
