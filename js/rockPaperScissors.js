@@ -11,7 +11,7 @@ function RockPaperScissors(choice) {
 		scissors: {
 			name: 'Scissors',
 			beats: {
-				paper: 'cut', // scissors cut paper
+				paper: 'cut' // scissors cut paper
 			}
 		},
 		paper: {
