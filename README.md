@@ -30,15 +30,15 @@ this.constraints = {
 	rock: {
 		name: 'Rock',
 		beats: {
-			scissors: 'crushes',
-			lizard: 'crushes'
+			scissors: 'crushes', // rock crushes scissors
+			lizard: 'crushes' // rock crushes lizard
 		}
 	},
 	scissors: {
 		name: 'Scissors',
 		beats: {
 			paper: 'cut', // scissors cut paper
-			lizard: 'decapitates'
+			lizard: 'decapitates' // scissors decapitate lizard
 		}
 	},
 	paper: {
@@ -48,10 +48,10 @@ this.constraints = {
 		}
 	},
 	lizard: {
-		name: "Lizard",
+		name: 'Lizard',
 		beats: {
-			paper: 'eats',
-			spock: 'poisons'
+			paper: 'eats', // lizard eats paper
+			spock: 'poisons' // lizard poisons spock
 		}
 	},
 };
