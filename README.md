@@ -50,8 +50,7 @@ this.constraints = {
 	lizard: {
 		name: 'Lizard',
 		beats: {
-			paper: 'eats', // lizard eats paper
-			spock: 'poisons' // lizard poisons spock
+			paper: 'eats' // lizard eats paper
 		}
 	},
 };
