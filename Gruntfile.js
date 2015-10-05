@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         singleRun: true,
         browsers: ['PhantomJS'],
         logLevel: 'INFO',
-        reporters: ['progress', 'coverage'],
+        reporters: ['story', 'progress', 'coverage'],
         options: {
           files: ['js/rockPaperScissors.js', 'js/test/unit/*.js']
         }
